@@ -1,4 +1,3 @@
-import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.serial.*;
 import com.pi4j.platform.Platform;
 import com.pi4j.platform.PlatformManager;
