@@ -25,7 +25,7 @@ public class RaspUart {
             });
 
             SerialConfig config = new SerialConfig();
-            config.device(RaspberryPiSerial.DEFAULT_COM_PORT)
+            config.device(RaspberryPiSerial.AMA0_COM_PORT)
                     .baud(Baud._9600)
                     .dataBits(DataBits._8)
                     .parity(Parity.NONE)
