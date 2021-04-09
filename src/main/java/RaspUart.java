@@ -1,14 +1,5 @@
-import com.pi4j.io.serial.Baud;
-import com.pi4j.io.serial.DataBits;
-import com.pi4j.io.serial.FlowControl;
-import com.pi4j.io.serial.OrangePiSerial;
-import com.pi4j.io.serial.Parity;
-import com.pi4j.io.serial.Serial;
-import com.pi4j.io.serial.SerialConfig;
-import com.pi4j.io.serial.SerialDataEvent;
-import com.pi4j.io.serial.SerialDataEventListener;
-import com.pi4j.io.serial.SerialFactory;
-import com.pi4j.io.serial.StopBits;
+import com.pi4j.io.gpio.RaspiPin;
+import com.pi4j.io.serial.*;
 import com.pi4j.platform.Platform;
 import com.pi4j.platform.PlatformManager;
 import com.pi4j.util.Console;
@@ -35,7 +26,7 @@ public class RaspUart {
             });
 
             SerialConfig config = new SerialConfig();
-            config.device(OrangePiSerial.UART3_COM_PORT)
+            config.device(RaspberryPiSerial.DEFAULT_COM_PORT)
                     .baud(Baud._9600)
                     .dataBits(DataBits._8)
                     .parity(Parity.NONE)
